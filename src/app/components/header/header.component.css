@@ -1,0 +1,26 @@
+.headerWrapper {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  margin-bottom: 40px;
+}
+
+.linkWrapper {
+  display: flex;
+  gap: 20px;
+}
+
+.headerTitle {
+  color: #f1699c;
+}
+
+.headerLink {
+  color: #f1699c;
+  text-decoration: none;
+  font-size: 20px;
+  transition: 0.3s;
+}
+
+.headerLink:hover {
+  color: #e01460;
+}

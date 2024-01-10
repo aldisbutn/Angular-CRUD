@@ -1,3 +1,18 @@
+.allPhotosWrapper {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 250px));
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+  justify-content: center;
+}
+
+.photoCard {
+  text-decoration: none;
+}
+
 .cardWrapper {
   width: 100%;
   max-width: 250px;
@@ -7,4 +22,11 @@
   gap: 10px;
   border: 1px solid #ccc;
   padding: 10px;
+  background-color: white;
+}
+
+.photoHeading {
+  padding-top: 5px;
+  color: black;
+  text-align: center;
 }
