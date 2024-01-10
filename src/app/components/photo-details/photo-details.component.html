@@ -1,0 +1,60 @@
+<h1 *ngIf="!photo">Loading....</h1>
+
+<section *ngIf="photo">
+  <div *ngIf="editMode">
+    <form [formGroup]="photoForm">
+      <label for="photo-title">Enter title</label>
+      <input
+        type="text"
+        id="photo-title"
+        [(ngModel)]="photo.title"
+        formControlName="title"
+      />
+
+      <label for="photo-description">Enter description</label>
+      <input
+        type="text"
+        id="photo-description"
+        [(ngModel)]="photo.description"
+        formControlName="description"
+      />
+
+      <label for="photo-URL">Enter photo URL</label>
+      <input
+        type="text"
+        id="photo-URL"
+        [(ngModel)]="photo.imageURL"
+        formControlName="imageURL"
+      />
+
+      <label for="photo-date">Enter the date the photo was taken</label>
+      <input
+        type="date"
+        id="photo-date"
+        [(ngModel)]="photo.dateTaken"
+        formControlName="dateTaken"
+      />
+      <app-button
+        text="Save"
+        color="green"
+        (btnClick)="editPhoto()"
+      ></app-button>
+    </form>
+  </div>
+  <div *ngIf="!editMode">
+    <img [src]="photo.imageURL" alt="" />
+    <h1>{{ photo.title }}</h1>
+    <h2>{{ photo.description }}</h2>
+    <h3>{{ photo.dateTaken }}</h3>
+    <app-button
+      text="Delete Photo"
+      color="red"
+      (btnClick)="deletePhoto()"
+    ></app-button>
+    <app-button
+      text="Edit Photo"
+      color="yellow"
+      (btnClick)="toggleEdit()"
+    ></app-button>
+  </div>
+</section>

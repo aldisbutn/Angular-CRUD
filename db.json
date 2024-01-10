@@ -1,0 +1,81 @@
+{
+  "photos": [
+    {
+      "id": "1",
+      "title": "Mountain View",
+      "description": "A breathtaking view of the mountains",
+      "imageURL": "https://picsum.photos/200",
+      "dateTaken": "2023-12-01"
+    },
+    {
+      "id": "2",
+      "title": "City Lights",
+      "description": "Sparkling city lights at night",
+      "imageURL": "https://picsum.photos/200",
+      "dateTaken": "2023-11-15"
+    },
+    {
+      "id": "3",
+      "title": "Flower Garden",
+      "description": "Colorful flowers in a vibrant garden",
+      "imageURL": "https://picsum.photos/200",
+      "dateTaken": "2023-10-20"
+    },
+    {
+      "id": "4",
+      "title": "Ocean Sunset",
+      "description": "Spectacular sunset over the ocean",
+      "imageURL": "https://picsum.photos/200",
+      "dateTaken": "2023-09-05"
+    },
+    {
+      "id": "5",
+      "title": "Autumn Leaves",
+      "description": "Fallen leaves in an autumn forest",
+      "imageURL": "https://picsum.photos/200",
+      "dateTaken": "2023-10-10"
+    },
+    {
+      "id": "6",
+      "title": "Desert Dunes",
+      "description": "Endless sand dunes in the desert",
+      "imageURL": "https://picsum.photos/200",
+      "dateTaken": "2023-08-18"
+    },
+    {
+      "id": "7",
+      "title": "Urban Exploration",
+      "description": "Exploring abandoned urban buildings",
+      "imageURL": "https://picsum.photos/200",
+      "dateTaken": "2023-07-02"
+    },
+    {
+      "id": "8",
+      "title": "Snowy Forest",
+      "description": "Snow-covered trees in a serene forest",
+      "imageURL": "https://picsum.photos/200",
+      "dateTaken": "2023-12-25"
+    },
+    {
+      "id": "9",
+      "title": "Bird's Eye View",
+      "description": "Aerial view of a bustling city",
+      "imageURL": "https://picsum.photos/200",
+      "dateTaken": "2023-11-01"
+    },
+    {
+      "id": "10",
+      "title": "Sunflower Field",
+      "description": "Endless sunflowers in a sunny field",
+      "imageURL": "https://picsum.photos/200",
+      "dateTaken": "2023-07-15"
+    },
+    {
+      "id": "7ab65f7e-6d9e-4a8f-8e91-3c26422f3934",
+      "title": "new",
+      "description": "photo",
+      "imageURL": "https://picsum.photos/200",
+      "dateTaken": "2024-01-18"
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+<section>
+    <h2>Add your Photo!</h2>
+    <form [formGroup]="photoForm" action="" (submit)="addPhoto()">
+        <label for="photo-title">Enter title</label>
+        <input type="text" id="photo-title" formControlName="title">
+        <label for="photo-description">Enter description</label>
+        <input type="text" id="photo-description" formControlName="description">
+        <label for="photo-URL">Enter photo URL</label>
+        <input type="text" id="photo-URL" formControlName="imageURL">
+        <label for="photo-date">Enter the date the photo was taken</label>
+        <input type="date" id="photo-date" formControlName="dateTaken">
+        <button type="submit">Add photo</button>
+    </form>
+</section>

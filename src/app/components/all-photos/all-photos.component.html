@@ -1,0 +1,8 @@
+<h1 *ngIf="!photos">Loading....</h1>
+
+<section *ngFor="let photo of photos">
+  <a [routerLink]="['/photo', photo.id]" *ngIf="photo" class="photoCard">
+    <img [src]="photo.imageURL" [alt]="photo.title" />
+    <h4>{{ photo.title }}</h4>
+  </a>
+</section>
