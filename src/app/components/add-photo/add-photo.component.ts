@@ -30,7 +30,7 @@ export class AddPhotoComponent {
     imageURL: new FormControl('', [Validators.required]),
     dateTaken: new FormControl('', [Validators.required]),
   });
-
+  // Form controls for showing error messages
   get form() {
     return this.photoForm.controls;
   }
@@ -43,12 +43,15 @@ export class AddPhotoComponent {
       imageURL: this.photoForm.value.imageURL || '',
       dateTaken: this.photoForm.value.dateTaken || '',
     };
+    // If form is untouched show a alert
     if (this.photoForm.untouched) {
       alert('Form is empty, please enter some data');
       return;
+      // If form is invalid dont post the photo
     } else if (this.photoForm.invalid) {
       return;
     }
+    // Post photo and navigate to the homepage
     this.photoService.addPhoto(photo).subscribe({
       next: (res) => {
         console.log(res);

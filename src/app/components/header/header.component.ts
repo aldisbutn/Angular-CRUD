@@ -7,12 +7,7 @@ import { RouterLink } from '@angular/router';
   standalone: true,
   imports: [ButtonComponent, RouterLink],
   templateUrl: './header.component.html',
-  styleUrl: './header.component.css'
+  styleUrl: './header.component.css',
 })
 export class HeaderComponent {
-
-
-  addTask() {
-    console.log('toggle')
-  }
 }

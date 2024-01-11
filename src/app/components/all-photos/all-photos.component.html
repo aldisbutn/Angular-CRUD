@@ -3,7 +3,7 @@
 <section class="allPhotosWrapper">
   <div *ngFor="let photo of photos" class="cardWrapper">
     <a [routerLink]="['/photo', photo.id]" *ngIf="photo" class="photoCard">
-      <img [src]="photo.imageURL" [alt]="photo.title" />
+      <img [src]="photo.imageURL" [alt]="photo.title" class="photoImageWrapper"/>
       <h4 class="photoHeading">{{ photo.title }}</h4>
     </a>
   </div>

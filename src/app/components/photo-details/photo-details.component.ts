@@ -2,9 +2,15 @@ import { Component, Input, inject } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { PhotosService } from '../../photos.service';
 import { PhotoType } from '../../PhotoType';
-import { NgIf, Location } from '@angular/common';
+import { NgIf } from '@angular/common';
 import { ButtonComponent } from '../button/button.component';
-import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
+import {
+  FormControl,
+  FormGroup,
+  ReactiveFormsModule,
+  Validators,
+} from '@angular/forms';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-photo-details',
@@ -14,37 +20,27 @@ import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
   styleUrl: './photo-details.component.css',
 })
 export class PhotoDetailsComponent {
-  photo: PhotoType = {
-    id: '',
-    title: '',
-    description: '',
-    imageURL: '',
-    dateTaken: '',
-  };
-  id: string = '';
-
-  photoForm = new FormGroup({
-    id: new FormControl(''),
-    title: new FormControl(''),
-    description: new FormControl(''),
-    imageURL: new FormControl(''),
-    dateTaken: new FormControl(''),
-  });
-
-  editMode: boolean = false;
-
   constructor(
     private photosService: PhotosService,
-    private location: Location,
     private route: ActivatedRoute,
-    private router: Router
+    private router: Router,
+    private titleService: Title
   ) {}
 
-  ngOnInit() {
-    this.getID();
-    this.getPhoto(this.id);
+  photoForm = new FormGroup({
+    id: new FormControl('', [Validators.required]),
+    title: new FormControl('', [Validators.required]),
+    description: new FormControl('', [Validators.required]),
+    imageURL: new FormControl('', [Validators.required]),
+    dateTaken: new FormControl('', [Validators.required]),
+  });
+  // Form controls for showing error messages
+  get form() {
+    return this.photoForm.controls;
   }
 
+  // Get the photo ID from the URL
+  id: string = '';
   getID() {
     this.id = String(this.route.snapshot.paramMap.get('id'));
   }
@@ -52,10 +48,23 @@ export class PhotoDetailsComponent {
   getPhoto(id: string) {
     this.photosService.getPhoto(id).subscribe({
       next: (data) => {
-        this.photo = data;
+        this.photoForm.setValue({
+          id: data.id,
+          title: data.title,
+          description: data.description,
+          imageURL: data.imageURL,
+          dateTaken: data.dateTaken,
+        });
+        // Change the page title to the photo title
+        this.titleService.setTitle(`${this.photoForm.value.title}`);
       },
       error: (e) => console.log(e),
     });
+  }
+
+  ngOnInit() {
+    this.getID();
+    this.getPhoto(this.id);
   }
 
   deletePhoto() {
@@ -68,8 +77,10 @@ export class PhotoDetailsComponent {
     });
   }
 
+  editMode: boolean = false;
   toggleEdit() {
     this.editMode = true;
+    this.titleService.setTitle(`Edit | ${this.photoForm.value.title}`);
   }
 
   editPhoto() {
@@ -80,10 +91,14 @@ export class PhotoDetailsComponent {
       imageURL: this.photoForm.value.imageURL || '',
       dateTaken: this.photoForm.value.dateTaken || '',
     };
+    if (this.photoForm.invalid) {
+      return;
+    }
     this.photosService.editPhoto(editedPhoto, this.id).subscribe({
       next: (res) => {
         console.log(res);
         this.editMode = false;
+        this.titleService.setTitle(`${this.photoForm.value.title}`);
       },
     });
   }

@@ -1,5 +1,6 @@
 <section class="addPhotoWrapper">
   <h2 class="addPhotoHeading">Add your Photo!</h2>
+  <!--Form-->
   <form [formGroup]="photoForm" (ngSubmit)="addPhoto()" class="addPhotoForm">
     <div class="formObjectWrapper">
       <label for="photo-title" class="formLabel">Enter title</label>
@@ -10,6 +11,7 @@
         formControlName="title"
         class="formInput"
       />
+      <!--If form is touched and input is invalid show error message-->
       <div *ngIf="form['title'].touched && form['title'].invalid">
         <div
           *ngIf="form['title'].errors && form['title'].errors['required']"

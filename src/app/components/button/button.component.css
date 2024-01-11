@@ -1,9 +1,20 @@
 .button {
-    padding: 10px;
-    border-radius: 5px;
-    border: none
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.button:hover {
+  box-shadow: 0 0 10px rgb(255, 255, 255);
+}
+
+.button:hover .buttonText {
+  color: white;
 }
 
 .buttonText {
-    color: #032503    ;
+  color: #032503;
+  transition: 0.3s;
 }

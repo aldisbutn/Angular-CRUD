@@ -1,60 +1,97 @@
-<h1 *ngIf="!photo">Loading....</h1>
+<h1 *ngIf="!this.photoForm.value">Loading....</h1>
 
-<section *ngIf="photo">
-  <div *ngIf="editMode">
-    <form [formGroup]="photoForm">
-      <label for="photo-title">Enter title</label>
-      <input
-        type="text"
-        id="photo-title"
-        [(ngModel)]="photo.title"
-        formControlName="title"
-      />
+<section *ngIf="this.photoForm.value" class="photoWrapper">
+  <!--When editMode is true show the edit form-->
+  <div *ngIf="editMode" class="editWrapper">
+    <!--Form-->
+    <form [formGroup]="photoForm" class="editPhotoForm">
+      <div class="formObjectWrapper">
+        <label for="photo-title" class="formLabel">Edit the title</label>
+        <input
+          type="text"
+          id="title"
+          name="title"
+          formControlName="title"
+          class="formInput"
+        />
+        <!--If form is touched and input is invalid show error message-->
+        <div *ngIf="form['title'].touched && form['title'].invalid">
+          <div
+            *ngIf="form['title'].errors && form['title'].errors['required']"
+            class="formAlert"
+          >
+            Name is required
+          </div>
+        </div>
+      </div>
 
-      <label for="photo-description">Enter description</label>
-      <input
-        type="text"
-        id="photo-description"
-        [(ngModel)]="photo.description"
-        formControlName="description"
-      />
+      <div class="formObjectWrapper">
+        <label for="photo-description" class="formLabel"
+          >Edit the description</label
+        >
+        <input
+          type="text"
+          name="description"
+          formControlName="description"
+          class="formInput"
+        />
+      </div>
 
-      <label for="photo-URL">Enter photo URL</label>
-      <input
-        type="text"
-        id="photo-URL"
-        [(ngModel)]="photo.imageURL"
-        formControlName="imageURL"
-      />
+      <div class="formObjectWrapper">
+        <label for="photo-URL" class="formLabel">Edit the photo URL</label>
+        <input
+          type="text"
+          name="url"
+          formControlName="imageURL"
+          class="formInput"
+        />
+      </div>
 
-      <label for="photo-date">Enter the date the photo was taken</label>
-      <input
-        type="date"
-        id="photo-date"
-        [(ngModel)]="photo.dateTaken"
-        formControlName="dateTaken"
-      />
+      <div class="formObjectWrapper">
+        <label for="photo-date" class="formLabel"
+          >Edit the date that the photo was taken</label
+        >
+        <input
+          type="date"
+          name="date"
+          formControlName="dateTaken"
+          class="formInput"
+        />
+      </div>
+
       <app-button
         text="Save"
-        color="green"
+        color="#3aed3a"
         (btnClick)="editPhoto()"
       ></app-button>
     </form>
   </div>
-  <div *ngIf="!editMode">
-    <img [src]="photo.imageURL" alt="" />
-    <h1>{{ photo.title }}</h1>
-    <h2>{{ photo.description }}</h2>
-    <h3>{{ photo.dateTaken }}</h3>
-    <app-button
-      text="Delete Photo"
-      color="red"
-      (btnClick)="deletePhoto()"
-    ></app-button>
-    <app-button
-      text="Edit Photo"
-      color="yellow"
-      (btnClick)="toggleEdit()"
-    ></app-button>
+  <!--If editMode is false show the photo details-->
+  <div *ngIf="!editMode" class="photoCardWrapper">
+    <div class="photoCard">
+      <img
+        [src]="photoForm.value.imageURL"
+        [alt]="photoForm.value.title"
+        class="photoImageWrapper"
+      />
+      <h1 class="photoTitleHeading">{{ photoForm.value.title }}</h1>
+    </div>
+    <div class="photoCardBottom">
+      <h2 class="photoDescriptionHeading">{{ photoForm.value.description }}</h2>
+      <h3 class="photoDateHeading">{{ photoForm.value.dateTaken }}</h3>
+      <hr />
+      <div class="buttonWrapper">
+        <app-button
+          text="Delete Photo"
+          color="#ed3a3a"
+          (btnClick)="deletePhoto()"
+        ></app-button>
+        <app-button
+          text="Edit Photo"
+          color="#eded3a"
+          (btnClick)="toggleEdit()"
+        ></app-button>
+      </div>
+    </div>
   </div>
 </section>

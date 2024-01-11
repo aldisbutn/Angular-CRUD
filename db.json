@@ -4,105 +4,91 @@
       "id": "1",
       "title": "Mountain View",
       "description": "A breathtaking view of the mountains",
-      "imageURL": "https://picsum.photos/200",
+      "imageURL": "https://images.photowall.com/products/59504/mountain-view-1.jpg?h=699&q=85",
       "dateTaken": "2023-12-01"
     },
     {
       "id": "2",
       "title": "City Lights",
       "description": "Sparkling city lights at night",
-      "imageURL": "https://picsum.photos/200",
+      "imageURL": "https://www.viewbug.com/media/mediafiles/2014/01/25/8915181_large1300.jpg",
       "dateTaken": "2023-11-15"
     },
     {
       "id": "3",
       "title": "Flower Garden",
       "description": "Colorful flowers in a vibrant garden",
-      "imageURL": "https://picsum.photos/200",
+      "imageURL": "https://www.marthastewart.com/thmb/EsRvlFFWoYhOQiClun585HwSoAE=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/low-maintenance-flowers-garden-lead-getty-0523-36413f10fff241e3b451a9b75bf7000f.jpg",
       "dateTaken": "2023-10-20"
     },
     {
       "id": "4",
       "title": "Ocean Sunset",
       "description": "Spectacular sunset over the ocean",
-      "imageURL": "https://picsum.photos/200",
+      "imageURL": "https://images.unsplash.com/photo-1503803548695-c2a7b4a5b875?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8c3Vuc2V0JTIwb2NlYW58ZW58MHx8MHx8fDA%3D",
       "dateTaken": "2023-09-05"
     },
     {
       "id": "5",
       "title": "Autumn Leaves",
       "description": "Fallen leaves in an autumn forest",
-      "imageURL": "https://picsum.photos/200",
+      "imageURL": "https://www.elitetreecare.com/wp-content/uploads/2019/10/autum-leaves.jpg",
       "dateTaken": "2023-10-10"
     },
     {
       "id": "6",
       "title": "Desert Dunes",
       "description": "Endless sand dunes in the desert",
-      "imageURL": "https://picsum.photos/200",
+      "imageURL": "https://cdn.britannica.com/48/106048-050-82819507/Sand-dunes-Sahara-Morocco.jpg",
       "dateTaken": "2023-08-18"
     },
     {
       "id": "7",
       "title": "Urban Exploration",
       "description": "Exploring abandoned urban buildings",
-      "imageURL": "https://picsum.photos/200",
+      "imageURL": "https://andreavanorsouw.com/wp-content/uploads/sites/14253/2023/02/urban-exploration-abandoned-places-engagement-photos-andea-van-orsouw-photography1.jpg",
       "dateTaken": "2023-07-02"
     },
     {
       "id": "8",
       "title": "Snowy Forest",
       "description": "Snow-covered trees in a serene forest",
-      "imageURL": "https://picsum.photos/200",
+      "imageURL": "https://images.unsplash.com/photo-1614630669107-f48325791b57?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8c25vdyUyMGZvcmVzdHxlbnwwfHwwfHx8MA%3D%3D",
       "dateTaken": "2023-12-25"
     },
     {
       "id": "9",
       "title": "Bird's Eye View",
       "description": "Aerial view of a bustling city",
-      "imageURL": "https://picsum.photos/200",
+      "imageURL": "https://shotkit.com/wp-content/uploads/bb-plugin/cache/birdsev-14-landscape-71bdedb0afa28f2b53832a9c205b89f5-zybravgx2q47.jpg",
       "dateTaken": "2023-11-01"
     },
     {
       "id": "10",
       "title": "Sunflower Field",
       "description": "Endless sunflowers in a sunny field",
-      "imageURL": "https://picsum.photos/200",
+      "imageURL": "https://www.milwaukeemag.com/wp-content/uploads/2021/07/GettyImages-1298291139.jpg",
       "dateTaken": "2023-07-15"
     },
     {
       "id": "7ab65f7e-6d9e-4a8f-8e91-3c26422f3934",
       "title": "new",
       "description": "photo",
-      "imageURL": "https://picsum.photos/200",
+      "imageURL": "https://picsum.photos/720",
       "dateTaken": "2024-01-18"
     },
     {
       "id": "96bd5183-2da2-4a50-a533-ae8009d46ff7",
       "title": "tester",
       "description": "1321",
-      "imageURL": "https://picsum.photos/200",
+      "imageURL": "https://img.freepik.com/free-photo/painting-mountain-lake-with-mountain-background_188544-9126.jpg",
       "dateTaken": "2024-01-11"
     },
     {
       "id": "a5ee5e21-7fb7-4cfc-8495-a79c01a1a9de",
       "title": "tester12312312",
       "description": "12312312",
-      "imageURL": "https://picsum.photos/200",
-      "dateTaken": "2024-01-11"
-    },
-    {
-      "id": "cc620d14-fc4b-4845-a418-92ad4501df17",
-      "title": "13123",
-      "description": "123123",
-      "imageURL": "https://picsum.photos/200",
-      "dateTaken": "2024-01-05"
-    },
-    {
-      "id": "b8316afc-f61b-466d-855c-ffdd49c3a2c4",
-      "title": "23123",
-      "description": "312312312",
-      "imageURL": "https://picsum.photos/200",
+      "imageURL": "https://images.pexels.com/photos/1557652/pexels-photo-1557652.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
       "dateTaken": "2024-01-11"
     }
   ]

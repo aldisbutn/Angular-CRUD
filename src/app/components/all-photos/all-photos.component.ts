@@ -14,15 +14,6 @@ import { PhotoDetailsComponent } from '../photo-details/photo-details.component'
 })
 export class AllPhotosComponent {
   photos: PhotoType[] = [];
-  currentPhoto: PhotoType = {
-    id: '',
-    title: '',
-    description: '',
-    imageURL: '',
-    dateTaken: '',
-  };
-  currentIndex = -1;
-
   constructor(private photosService: PhotosService) {}
 
   ngOnInit() {
@@ -33,12 +24,5 @@ export class AllPhotosComponent {
     this.photosService
       .getPhotos()
       .subscribe((photos) => (this.photos = photos));
-  }
-
-  setActivePhoto(photo: PhotoType, index: number) {
-    this.currentPhoto = photo;
-    this.currentIndex = index;
-    console.log(this.currentIndex);
-    console.log(this.currentPhoto);
   }
 }

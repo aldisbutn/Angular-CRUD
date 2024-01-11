@@ -1,0 +1,101 @@
+.photoWrapper {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.editWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 20px;
+}
+
+.editPhotoForm {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background-color: #341923;
+  padding: 40px;
+  border-radius: 5px;
+}
+
+.photoCardWrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.photoImageWrapper {
+  width: 100%;
+}
+
+.photoCard {
+  width: 100%;
+  background-color: white;
+  padding: 40px;
+}
+
+.photoCardBottom {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 5px;
+  background-color: #341923;
+}
+
+.buttonWrapper {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  margin-top: 15px;
+}
+
+.photoTitleHeading {
+  padding-top: 25px;
+  color: black;
+  text-align: center;
+  font-size: 40px;
+  font-family: "Kalam", cursive;
+}
+
+.photoDescriptionHeading,
+.photoDateHeading {
+  color: white;
+}
+
+hr {
+  width: 100%;
+  border: 1px solid #f1699c;
+  border-radius: 5px;
+}
+
+.formInput {
+  width: 100%;
+  padding: 2px 5px;
+  background-color: #e6cbd5;
+  border-radius: 5px;
+  border: none;
+}
+
+.formInput:focus {
+  outline: none;
+}
+
+.formObjectWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  position: relative;
+}
+.formLabel {
+  color: #ffffff;
+  font-size: 15px;
+}
